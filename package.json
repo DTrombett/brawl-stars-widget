@@ -1,16 +1,22 @@
 {
-  "name": "brawl-stars-widget",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "deploy": "wrangler deploy",
-    "dev": "wrangler dev --test-scheduled",
-    "start": "wrangler dev --test-scheduled",
-    "cf-typegen": "wrangler types"
-  },
-  "devDependencies": {
-    "@types/node": "^26.1.0",
-    "typescript": "^5.5.2",
-    "wrangler": "^4.107.0"
-  }
+	"name": "brawl-stars-widget",
+	"private": true,
+	"scripts": {
+		"deploy": "wrangler deploy",
+		"dev": "wrangler dev",
+		"test": "tsc",
+		"types": "wrangler types"
+	},
+	"dependencies": {
+		"discord-api-types": "^0.38.49"
+	},
+	"devDependencies": {
+		"typescript": "^6.0.3",
+		"wrangler": "^4.107.0"
+	},
+	"allowScripts": {
+		"esbuild@0.28.1": true,
+		"sharp@0.34.5": true,
+		"workerd@1.20260701.1": true
+	}
 }
