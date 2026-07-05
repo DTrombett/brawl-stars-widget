@@ -9,7 +9,7 @@
 		{
 			"name": "update-widget",
 			"class_name": "UpdateWidget",
-			"schedules": ["*/1 * * * *"],
+			"schedules": ["0 */1 * * *"],
 			"binding": "_UPDATE_WIDGET",
 		},
 	],
@@ -17,5 +17,5 @@
 		"pattern": "brawl-stars-widget.trombett.org",
 		"custom_domain": true,
 	},
-	"assets": { "directory": "./assets" },
+	"assets": { "directory": "./assets", "not_found_handling": "404-page" },
 }
