@@ -10,7 +10,7 @@
 			"name": "update-widget",
 			"class_name": "UpdateWidget",
 			"schedules": ["0 */1 * * *"],
-			"binding": "_UPDATE_WIDGET",
+			"binding": "UPDATE_WIDGET",
 		},
 	],
 	"route": {
