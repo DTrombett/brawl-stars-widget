@@ -2,7 +2,7 @@
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"name": "brawl-stars-widget",
 	"main": "src/index.ts",
-	"compatibility_date": "2026-07-03",
+	"compatibility_date": "2026-07-07",
 	"observability": { "enabled": true },
 	"upload_source_maps": true,
 	"workflows": [
