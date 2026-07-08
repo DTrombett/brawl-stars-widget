@@ -5,17 +5,19 @@
 	"compatibility_date": "2026-07-07",
 	"observability": { "enabled": true },
 	"upload_source_maps": true,
-	"workflows": [
-		{
-			"name": "update-widget",
-			"class_name": "UpdateWidget",
-			"schedules": ["0 */1 * * *"],
-			"binding": "UPDATE_WIDGET",
-		},
-	],
+	"assets": { "directory": "./assets", "not_found_handling": "404-page" },
 	"route": {
 		"pattern": "brawl-stars-widget.trombett.org",
 		"custom_domain": true,
 	},
-	"assets": { "directory": "./assets", "not_found_handling": "404-page" },
+	"triggers": {
+		"crons": ["0 */1 * * *"],
+	},
+	"workflows": [
+		{
+			"name": "update-widget",
+			"class_name": "UpdateWidget",
+			"binding": "UPDATE_WIDGET",
+		},
+	],
 }
