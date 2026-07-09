@@ -3,7 +3,7 @@ import fetchPlayer from "./utils/fetchPlayer";
 import fetchTrophyWorlds from "./utils/fetchTrophyWorlds";
 import updateWidget from "./utils/updateWidget";
 
-loadEnvFile();
+loadEnvFile(".dev.vars");
 
 const [player, worlds] = await Promise.all([
 	fetchPlayer(env),
