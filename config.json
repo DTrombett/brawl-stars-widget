@@ -1,0 +1,372 @@
+{
+	"config_id": "1522253212026011819",
+	"application_id": "1522252495882293500",
+	"display_name": "Brawl Stars Profile",
+	"status": "published",
+	"surfaces": {
+		"widget_bottom": {
+			"layout": "widget_bottom_stats",
+			"components": {
+				"stat_5": {
+					"fields": {
+						"value": {
+							"value_type": "data",
+							"presentation_type": "number",
+							"value": "highestAllTimeRankedElo",
+							"fallback": {
+								"value_type": "custom_string",
+								"presentation_type": "text",
+								"value": "0"
+							}
+						},
+						"icon": {
+							"value_type": "data",
+							"presentation_type": "image",
+							"value": "highestAllTimeRankedRank"
+						},
+						"label": {
+							"value_type": "custom_string",
+							"presentation_type": "text",
+							"value": "Highest Ranked"
+						}
+					}
+				},
+				"stat_1": {
+					"fields": {
+						"value": {
+							"value_type": "data",
+							"presentation_type": "number",
+							"value": "trophies",
+							"fallback": {
+								"value_type": "custom_string",
+								"presentation_type": "text",
+								"value": "0"
+							}
+						},
+						"icon": {
+							"value_type": "data",
+							"presentation_type": "image",
+							"value": "trophyRoad",
+							"fallback": {
+								"value_type": "application_asset",
+								"presentation_type": "image",
+								"value": "65"
+							}
+						},
+						"label": {
+							"value_type": "custom_string",
+							"presentation_type": "text",
+							"value": "Total Trophies"
+						}
+					}
+				},
+				"stat_3": {
+					"fields": {
+						"value": {
+							"value_type": "data",
+							"presentation_type": "number",
+							"value": "sdVictories",
+							"fallback": {
+								"value_type": "custom_string",
+								"presentation_type": "text",
+								"value": "0"
+							}
+						},
+						"icon": {
+							"value_type": "application_asset",
+							"presentation_type": "image",
+							"value": "83"
+						},
+						"label": {
+							"value_type": "custom_string",
+							"presentation_type": "text",
+							"value": "Showdown Wins"
+						}
+					}
+				},
+				"stat_2": {
+					"fields": {
+						"value": {
+							"value_type": "data",
+							"presentation_type": "number",
+							"value": "rankedElo",
+							"fallback": {
+								"value_type": "custom_string",
+								"presentation_type": "text",
+								"value": "0"
+							}
+						},
+						"icon": {
+							"value_type": "data",
+							"presentation_type": "image",
+							"value": "rankedRank"
+						},
+						"label": {
+							"value_type": "custom_string",
+							"presentation_type": "text",
+							"value": "Current Ranked"
+						}
+					}
+				},
+				"stat_4": {
+					"fields": {
+						"value": {
+							"value_type": "data",
+							"presentation_type": "number",
+							"value": "maxWinStreak"
+						},
+						"icon": {
+							"value_type": "data",
+							"presentation_type": "image",
+							"value": "maxWinStreakBrawlerEmoji",
+							"fallback": {
+								"value_type": "application_asset",
+								"presentation_type": "image",
+								"value": "356"
+							}
+						},
+						"label": {
+							"value_type": "custom_string",
+							"presentation_type": "text",
+							"value": "Max Win Streak"
+						}
+					}
+				},
+				"stat_6": {
+					"fields": {
+						"value": {
+							"value_type": "data",
+							"presentation_type": "number",
+							"value": "3v3Victories",
+							"fallback": {
+								"value_type": "custom_string",
+								"presentation_type": "text",
+								"value": "0"
+							}
+						},
+						"icon": {
+							"value_type": "application_asset",
+							"presentation_type": "image",
+							"value": "81"
+						},
+						"label": {
+							"value_type": "custom_string",
+							"presentation_type": "text",
+							"value": "3v3 Wins"
+						}
+					}
+				}
+			}
+		},
+		"add_widget_preview": {
+			"layout": "add_widget_preview_contained",
+			"components": {
+				"contained_image": {
+					"fields": {
+						"image": {
+							"value_type": "data",
+							"presentation_type": "image",
+							"value": "icon",
+							"fallback": {
+								"value_type": "application_asset",
+								"presentation_type": "image",
+								"value": "108"
+							}
+						}
+					}
+				}
+			}
+		},
+		"widget_top": {
+			"layout": "widget_top_contained",
+			"components": {
+				"contained_image": {
+					"fields": {
+						"image": {
+							"value_type": "data",
+							"presentation_type": "image",
+							"value": "icon",
+							"fallback": {
+								"value_type": "application_asset",
+								"presentation_type": "image",
+								"value": "108"
+							}
+						}
+					}
+				},
+				"title": {
+					"fields": {
+						"text": {
+							"value_type": "data",
+							"presentation_type": "text",
+							"value": "username"
+						}
+					}
+				},
+				"subtitle_1": {
+					"fields": {
+						"text": {
+							"value_type": "data",
+							"presentation_type": "text",
+							"value": "tag"
+						},
+						"label": {
+							"value_type": "custom_string",
+							"presentation_type": "text",
+							"value": "Tag"
+						}
+					}
+				},
+				"subtitle_3": {
+					"fields": {
+						"text": {
+							"value_type": "data",
+							"presentation_type": "number",
+							"value": "totalPrestigeLevel",
+							"fallback": {
+								"value_type": "custom_string",
+								"presentation_type": "text",
+								"value": "0"
+							}
+						},
+						"icon": {
+							"value_type": "application_asset",
+							"presentation_type": "image",
+							"value": "39"
+						},
+						"label": {
+							"value_type": "custom_string",
+							"presentation_type": "text",
+							"value": "Prestige"
+						}
+					}
+				},
+				"subtitle_2": {
+					"fields": {
+						"text": {
+							"value_type": "data",
+							"presentation_type": "text",
+							"value": "clubName"
+						},
+						"icon": {
+							"value_type": "application_asset",
+							"presentation_type": "image",
+							"value": "9"
+						},
+						"label": {
+							"value_type": "custom_string",
+							"presentation_type": "text",
+							"value": "Club"
+						}
+					}
+				}
+			}
+		}
+	},
+	"updated_at": "2026-07-09T17:05:52.109597+00:00",
+	"published_at": "2026-07-02T18:28:02.572950+00:00",
+	"resolved_assets": [
+		{
+			"key": "9",
+			"asset_id": "1522596078296498336",
+			"asset_type": "image",
+			"metadata": {
+				"width": 77,
+				"height": 60,
+				"content_type": "image/png",
+				"is_animated": false
+			},
+			"updated_at": "2026-07-03T13:33:25.862000+00:00",
+			"visibility": "public"
+		},
+		{
+			"key": "39",
+			"asset_id": "1522660348371538080",
+			"asset_type": "image",
+			"metadata": {
+				"width": 276,
+				"height": 236,
+				"content_type": "image/png",
+				"is_animated": false
+			},
+			"updated_at": "2026-07-03T17:48:40.801000+00:00",
+			"visibility": "public"
+		},
+		{
+			"key": "83",
+			"asset_id": "1522291455312265297",
+			"asset_type": "image",
+			"metadata": {
+				"width": 79,
+				"height": 90,
+				"content_type": "image/png",
+				"is_animated": false
+			},
+			"updated_at": "2026-07-02T17:22:49.879000+00:00",
+			"visibility": "public"
+		},
+		{
+			"key": "108",
+			"asset_id": "1522661167091417228",
+			"asset_type": "image",
+			"metadata": {
+				"width": 100,
+				"height": 100,
+				"content_type": "image/png",
+				"is_animated": false
+			},
+			"updated_at": "2026-07-03T17:51:58.531000+00:00",
+			"visibility": "public"
+		},
+		{
+			"key": "65",
+			"asset_id": "1522658151629979809",
+			"asset_type": "image",
+			"metadata": {
+				"width": 80,
+				"height": 72,
+				"content_type": "image/png",
+				"is_animated": false
+			},
+			"updated_at": "2026-07-03T17:39:56.063000+00:00",
+			"visibility": "public"
+		},
+		{
+			"key": "81",
+			"asset_id": "1522291676557607054",
+			"asset_type": "image",
+			"metadata": {
+				"width": 52,
+				"height": 46,
+				"content_type": "image/png",
+				"is_animated": false
+			},
+			"updated_at": "2026-07-02T17:23:41.686000+00:00",
+			"visibility": "public"
+		},
+		{
+			"key": "356",
+			"asset_id": "1524820480974917814",
+			"asset_type": "image",
+			"metadata": {
+				"width": 82,
+				"height": 104,
+				"content_type": "image/gif",
+				"is_animated": true
+			},
+			"updated_at": "2026-07-09T16:52:12.591000+00:00",
+			"visibility": "public"
+		}
+	],
+	"application": {
+		"id": "1522252495882293500",
+		"name": "Brawl Stars Profile",
+		"icon": null,
+		"description": "",
+		"type": null,
+		"summary": "",
+		"is_monetized": false,
+		"is_verified": false,
+		"is_discoverable": false
+	}
+}
