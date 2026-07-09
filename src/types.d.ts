@@ -130,3 +130,21 @@ namespace Brawl {
 		paging: { cursors: { after?: string; before?: string } };
 	};
 }
+
+type TrophyWorlds = Record<
+	string,
+	{
+		id: string;
+		Name: string;
+		WorldNumber: number;
+		IconExportPath: string;
+		TierTrophyThresholds: number[];
+		NameTID: string;
+	}
+>;
+
+namespace NodeJS {
+	interface Process {
+		env: Env;
+	}
+}
