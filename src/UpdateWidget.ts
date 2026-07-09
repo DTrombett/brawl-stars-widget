@@ -69,6 +69,9 @@ export class UpdateWidget extends WorkflowEntrypoint<Env> {
 		player: Brawl.Player,
 		worlds: TrophyWorlds | undefined,
 	) {
+		const maxWinStreakBrawler = player.brawlers.reduce((a, b) =>
+			b.maxWinStreak > a.maxWinStreak ? b : a,
+		);
 		const dynamic: ({ name: string } & (
 			| { type: 1; value: string }
 			| { type: 2; value: number }
@@ -115,6 +118,18 @@ export class UpdateWidget extends WorkflowEntrypoint<Env> {
 				type: 2,
 				name: "totalPrestigeLevel",
 				value: player.totalPrestigeLevel,
+			},
+			{
+				type: 2,
+				name: "maxWinStreak",
+				value: maxWinStreakBrawler.maxWinStreak,
+			},
+			{
+				type: 3,
+				name: "maxWinStreakBrawlerEmoji",
+				value: {
+					url: `https://cdn.brawlify.com/brawlers/emoji/${maxWinStreakBrawler.id}.png`,
+				},
 			},
 		];
 		if (player.rankedRank)
