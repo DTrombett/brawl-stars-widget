@@ -1,7 +1,7 @@
 import { env, loadEnvFile } from "node:process";
-import fetchPlayer from "./utils/fetchPlayer";
-import fetchTrophyWorlds from "./utils/fetchTrophyWorlds";
-import updateWidget from "./utils/updateWidget";
+import fetchPlayer from "./utils/fetchPlayer.ts";
+import fetchTrophyWorlds from "./utils/fetchTrophyWorlds.ts";
+import updateWidget from "./utils/updateWidget.ts";
 
 loadEnvFile(".dev.vars");
 
