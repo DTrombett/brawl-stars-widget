@@ -13,3 +13,4 @@ const [player, worlds] = await Promise.all([
 ]);
 
 await updateWidget(player, worlds, env);
+console.log("Profile updated!");

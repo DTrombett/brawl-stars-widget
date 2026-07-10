@@ -2,6 +2,7 @@
 	"name": "brawl-stars-widget",
 	"private": true,
 	"type": "module",
+	"main": "src/node.ts",
 	"scripts": {
 		"deploy": "wrangler deploy",
 		"dev": "wrangler dev",
