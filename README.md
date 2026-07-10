@@ -37,6 +37,10 @@ A Discord widget to show your Brawl Stars stats on your Discord profile.
 7. Reload your Discord client to see the updated data
 8. Run `node .` again every time you want to update the data or setup a cron job to run it automatically
 
+## Images
+
+![screenshot](./images/screenshot.png)
+
 ## Disclaimer
 
 This content is not affiliated with, endorsed, sponsored, or specifically approved by Supercell and Supercell is not responsible for it. For more information see [Supercell’s Fan Content Policy](https://supercell.com/en/fan-content-policy/).
