@@ -373,3 +373,4 @@ await api.put({
 	url: `/users/@me/widgets`,
 	body: { widgets: existingWidgets },
 });
+console.log("[Widget Creator] Widget successfully added");
