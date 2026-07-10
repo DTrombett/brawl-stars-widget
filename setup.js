@@ -1,9 +1,5 @@
 let wpRequire = webpackChunkdiscord_developers.push([[Symbol()], {}, (r) => r]);
 webpackChunkdiscord_developers.pop();
-
-let ApexStore = Object.values(wpRequire.c).find(
-	(x) => x?.exports?.A?.createOverride,
-).exports.A;
 let UserStore = Object.values(wpRequire.c).find(
 	(x) => x?.exports?.A?.__proto__?.getCurrentUser,
 ).exports.A;
@@ -12,12 +8,8 @@ let FluxDispatcher = Object.values(wpRequire.c).find(
 ).exports.A;
 let api = Object.values(wpRequire.c).find((x) => x?.exports?.Bo?.get).exports
 	.Bo;
-let globalCopy = navigator.userAgent.includes("Firefox")
-	? navigator.clipboard.writeText.bind(navigator.clipboard)
-	: copy;
-const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-
 const userId = UserStore.getCurrentUser().id;
+
 console.log(
 	"[Widget Creator] Creating a new app... Please solve the captcha if prompted",
 );
@@ -55,6 +47,45 @@ const configRes = await api.post({
 	body: { display_name: "Brawl Stars Profile" },
 });
 const configId = configRes.body.config_id;
+
+console.log("[Widget Creator] Uploading required assets...");
+for (const asset of (
+	await api.get({
+		url: `/applications/1522252495882293500/assets`,
+	})
+).body) {
+	if (asset.visibility !== "public") continue;
+	const assetRes = await fetch(
+		`https://cdn.discordapp.com/app-assets/1522252495882293500/${asset.asset_id}.png?size=4096`,
+	);
+	const uploadRes = await api.post({
+		url: `/applications/${appId}/assets/upload`,
+		body: {
+			filename: `${asset.asset_id}.png`,
+			file_size: Number(assetRes.headers.get("Content-Length")),
+		},
+	});
+	await fetch(uploadRes.body.upload_url, {
+		method: "PUT",
+		body: assetRes.body,
+		headers: {
+			"content-length": assetRes.headers.get("Content-Length") ?? "",
+			"content-type":
+				assetRes.headers.get("Content-Type") ?? "application/octet-stream",
+		},
+		duplex: "half",
+	});
+	await api.post({
+		url: `/applications/${appId}/assets`,
+		body: {
+			key: asset.key,
+			upload_filename: uploadRes.body.upload_filename,
+			visibility: "public",
+		},
+	});
+}
+
+console.log("[Widget Creator] Updating widget config and publishing...");
 await api.patch({
 	url: `/applications/${appId}/widget-configs/${configId}`,
 	body: {
@@ -320,7 +351,6 @@ await api.patch({
 		},
 	},
 });
-// TODO: We first need to add assets somehow
 await api.post({
 	url: `/applications/${appId}/widget-configs/${configId}/publish`,
 });
