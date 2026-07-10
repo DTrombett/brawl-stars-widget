@@ -1,6 +1,6 @@
 # Brawl Stars Widget
 
-A Discord widget to show your Brawl Stars profile in your public Discord profile.
+A Discord widget to show your Brawl Stars stats on your Discord profile.
 
 ## Setup instructions
 
