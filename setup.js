@@ -320,6 +320,7 @@ await api.patch({
 		},
 	},
 });
+// TODO: We first need to add assets somehow
 await api.post({
 	url: `/applications/${appId}/widget-configs/${configId}/publish`,
 });
